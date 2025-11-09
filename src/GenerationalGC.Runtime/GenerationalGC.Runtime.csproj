@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Heap1\**"/>
+        <Compile Remove="Memory\**"/>
+        <Compile Remove="Models\**"/>
+        <Compile Remove="Engine\EphemeralCollector.cs"/>
+        <Compile Remove="Core\HeapBrickIndex.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="Heap1\**"/>
+        <EmbeddedResource Remove="Memory\**"/>
+        <EmbeddedResource Remove="Models\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Heap1\**"/>
+        <None Remove="Memory\**"/>
+        <None Remove="Models\**"/>
+    </ItemGroup>
+
+</Project>
